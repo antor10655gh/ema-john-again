@@ -1,0 +1,11 @@
+.product-container {
+    text-align: left;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
