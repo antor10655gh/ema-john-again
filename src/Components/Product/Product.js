@@ -5,6 +5,7 @@ import './Product.css'
 
 const Product = (props) => {
     const {id, name, price, ratings, img, seller} = props.product;
+    const {addToCart} = props;
     return (
         <div className="col product-container">
             <div className="card h-100">
@@ -15,7 +16,7 @@ const Product = (props) => {
                     <p className="card-text">Manufacturer: {seller}</p>
                     <p className="card-text">Rating: {ratings} stars</p>
                 </div>
-                <button className='btn btn-info'>
+                <button className='btn btn-info' onClick={()=>addToCart(props.product)}>
                     <span>Add To Cart</span>
                     <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                 </button>
